@@ -1,0 +1,26 @@
+function e=earthquake(lat, long, depth,shift)
+
+if nargin==0
+	load EarthquakeParams.dat
+	e.latitud=EarthquakeParams(1);
+	e.longitud=EarthquakeParams(2);
+	e.depth=EarthquakeParams(3);
+	e=class(e,'earthquake');
+elseif nargin==1||nargin==2
+	error('Not enough input arguments');
+elseif nargin==3
+	e.latitud=lat;
+	e.longitud=long;
+	e.depth=depth;
+	e.shift=0;
+	e=class(e,'earthquake');
+elseif nargin==4
+	e.latitud=lat;
+	e.longitud=long;
+	e.depth=depth;
+	e.shift=shift;
+	e=class(e,'earthquake');
+else
+	error('Invalid number of input arguments');
+end
+	

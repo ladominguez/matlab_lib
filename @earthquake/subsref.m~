@@ -1,0 +1,27 @@
+function FieldVal=subsref(e,S)
+
+switch S.type
+case '.'
+	switch S.subs
+	case 'latitud'
+		FieldVal=e.latitud;
+	case 'longitud'
+		FieldVal=e.longitud;
+	case 'depth'
+		FieldVal=e.depth;
+	case 'latlon'
+		FieldVal=[e.latitud e.longitud];
+	case 'layer'
+		FieldVal=Layer(e);
+	otherwise
+		error('Wrong field.');
+	end
+case '()'
+	disp('I have done this yet.');
+case'{}'
+	disp('I have done this yet.');
+otherwise
+	disp('Error-');
+end
+	
+	

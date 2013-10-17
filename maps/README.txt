@@ -1,0 +1,4 @@
+Mexico costline.dat - I found it at http://rimmer.ngdc.noaa.gov/mgg/coast/wvs.html (Matlab Format)
+Mexico costline.ascii - I found it at http://rimmer.ngdc.noaa.gov/mgg/coast/wvs.html (Mapgen Format)
+
+The selected data returned by the query is an ASCII flat file with two columns containing longitude and latitude in decimal degrees (west negative). The default MAPGEN format is lon,lat with new segments separated by a line containing the characters "# -b". The MATLAB format is the same, but with the characters "nan nan" indicating line breaks, so in MATLAB you can type "load coast.dat" then "plot(coast(:,1),coast(:,2)". The Arc Ungenerate format works with Arc/Info.

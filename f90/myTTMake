@@ -1,0 +1,2 @@
+f77 myTTFORTRAN.f libtau.f libsun.f emiasp91.f -o PWave.out
+
